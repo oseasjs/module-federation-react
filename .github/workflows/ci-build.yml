@@ -25,7 +25,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Build & Deploy HOME module
-      working-directory: application/home
+      working-directory: applications/home
       run: |
         npm install
         npm run build
@@ -33,7 +33,7 @@ jobs:
         CI: true
 
     - name: Build & Deploy SEARCH module
-      working-directory: application/search
+      working-directory: applications/search
       run: |
         npm install
         npm run build
@@ -41,7 +41,7 @@ jobs:
         CI: true
 
     - name: Build & Deploy CHECKOUT module
-      working-directory: application/checkout
+      working-directory: applications/checkout
       run: |
         npm install
         npm run build
