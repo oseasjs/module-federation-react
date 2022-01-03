@@ -20,16 +20,16 @@ eval("Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_b
 /***/ }),
 
 /***/ "webpack/container/reference/home":
-/*!**********************************************************************************************!*\
-  !*** external "home@https://oseasjs.github.io/module-federation-react/home//remoteEntry.js" ***!
-  \**********************************************************************************************/
+/*!*********************************************************************************************!*\
+  !*** external "home@https://oseasjs.github.io/module-federation-react/home/remoteEntry.js" ***!
+  \*********************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof home !== "undefined") return resolve();
-	__webpack_require__.l("https://oseasjs.github.io/module-federation-react/home//remoteEntry.js", (event) => {
+	__webpack_require__.l("https://oseasjs.github.io/module-federation-react/home/remoteEntry.js", (event) => {
 		if(typeof home !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;

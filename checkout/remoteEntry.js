@@ -22,15 +22,15 @@ eval("var moduleMap = {\n\t\"./Checkout\": () => {\n\t\treturn Promise.all([__we
 /***/ }),
 
 /***/ "webpack/container/reference/search":
-/*!**************************************************************************************************!*\
-  !*** external "search@https://oseasjs.github.io/module-federation-react/search//remoteEntry.js" ***!
-  \**************************************************************************************************/
+/*!*************************************************************************************************!*\
+  !*** external "search@https://oseasjs.github.io/module-federation-react/search/remoteEntry.js" ***!
+  \*************************************************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof search !== "undefined") return resolve();
-	__webpack_require__.l("https://oseasjs.github.io/module-federation-react/search//remoteEntry.js", (event) => {
+	__webpack_require__.l("https://oseasjs.github.io/module-federation-react/search/remoteEntry.js", (event) => {
 		if(typeof search !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
