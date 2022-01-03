@@ -31,7 +31,6 @@ const SearchContent = () => {
             <Card style={{ width: "18rem" }} key={pokemon.name.english}>
               <Card.Img
                 variant="top"
-                // src={getImage(pokemon)}
                 src={getProductImage(pokemon)}
                 style={{
                   maxHeight: 200,

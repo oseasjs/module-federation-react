@@ -21,8 +21,10 @@ const searchProduct = (name) =>
     }))
     .slice(0, 30)
 
-const getProductImage = (pokemon) =>
-  `http://localhost:9020/images/${pokemon.name.english.toLowerCase().replace(" ", "-")}.jpg`;
+const getProductImage = (pokemon) => {
+  // return `http://localhost:9020/images/${pokemon.name.english.toLowerCase().replace(" ", "-")}.jpg`
+  return `https://github.com/oseasjs/module-federation-react/tree/main/applications/home/public/images/${pokemon.name.english.toLowerCase().replace(" ", "-")}.jpg`
+}
 
 module.exports = {
   getProductById,
