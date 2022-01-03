@@ -3,23 +3,23 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 const deps = require("./package.json").dependencies;
 
-const getUrl = (env) => {
+const getUrl = (_env, _module, _port) => {
 
-  if (env.github) {
-    return 'https://oseasjs.github.io/module-federation-react/checkout/'
+  if (_env.github) {
+    return `https://oseasjs.github.io/module-federation-react/${_module}/`
   }
-  else if (env.vercel) {
-    return 'https://module-federation-react-checkout.vercel.app/'
+  else if (_env.vercel) {
+    return `https://module-federation-react-${_module}.vercel.app/`
   }
   else {
-    return 'http://localhost:9021/'
+    return `http://localhost:${_port}/`
   }
   
 }
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: getUrl(argv.env),
+    publicPath: getUrl(argv.env, 'checkout', '9021'),
   },
   resolve: {
     extensions: [".jsx", ".js", ".json"],
@@ -58,9 +58,9 @@ module.exports = (_, argv) => ({
       name: "checkout",
       filename: "remoteEntry.js",
       remotes: {
-        home: "home@http://localhost:9020/remoteEntry.js",
-        checkout: "checkout@http://localhost:9021/remoteEntry.js",
-        search: "search@http://localhost:9022/remoteEntry.js",
+        home: `home@${getUrl(argv.env, 'home', '9020')}/remoteEntry.js`,
+        checkout: `checkout@${getUrl(argv.env, 'checkout', '9021')}/remoteEntry.js`,
+        search: `search@${getUrl(argv.env, 'search', '9022')}/remoteEntry.js`,
       },
       exposes: {
         "./Checkout": "./src/CheckoutContent",

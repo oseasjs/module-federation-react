@@ -7,7 +7,7 @@
     "build": "webpack --mode development --env github",
     "start": "webpack-dev-server --mode development --env local",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -e search -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
