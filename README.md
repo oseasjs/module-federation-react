@@ -4,8 +4,8 @@
 
 | Branch        | Build         | Coverage  |
 | ------------- |:-------------:| ---------:|
-| Develop       | TODO          | TODO      |
-| Master        | TODO          | TODO      |
+| Develop       | ![CI](https://github.com/oseasjs/module-federation-react/workflows/CI/badge.svg?branch=develop) | [![codecov](https://codecov.io/gh/oseasjs/module-federation-react/branch/develop/graph/badge.svg)](https://codecov.io/gh/oseasjs/module-federation-react/branch/develop) |
+| Main          | ![CI](https://github.com/oseasjs/module-federation-react/workflows/CI/badge.svg?branch=main)  | [![codecov](https://codecov.io/gh/oseasjs/module-federation-react/branch/main/graph/badge.svg)](https://codecov.io/gh/oseasjs/module-federation-react/branch/main) |
 
 
 ## This project was bootstrapped with:
@@ -26,8 +26,8 @@ _TODO_
 _TODO_
 
 * Running Locally: http://localhost:9020 | http://localhost:9021 | http://localhost:9022
-* On Github Pages: https://oseasjs.github.io/module-federation-react/root-config/
-* On Netlify: https://module-federation-react.netlify.app/
+* On Github Pages: https://oseasjs.github.io/module-federation-react/home/
+* On Vercel: https://module-federation-react.vercel.app/
 
 
 ## Inspiration
