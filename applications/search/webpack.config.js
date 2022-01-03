@@ -5,8 +5,6 @@ const deps = require("./package.json").dependencies;
 
 const getUrl = (_env, _module, _port) => {
 
-  console.log(`### getUrl`, {_env, _module, _port})
-
   if (_env.github) {
     return `https://oseasjs.github.io/module-federation-react/${_module}/`
   }
