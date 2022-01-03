@@ -2,9 +2,24 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 const deps = require("./package.json").dependencies;
-module.exports = {
+
+const getUrl = (env) => {
+
+  if (env.github) {
+    return 'https://oseasjs.github.io/module-federation-react/home/'
+  }
+  else if (env.vercel) {
+    return 'https://module-federation-react.vercel.app/'
+  }
+  else {
+    return 'http://localhost:9020/'
+  }
+  
+}
+
+module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:9020/",
+    publicPath: getUrl(argv.env),
   },
   resolve: {
     extensions: [".jsx", ".js", ".json"],
@@ -68,4 +83,4 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
-};
+});
