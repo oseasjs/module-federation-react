@@ -28,7 +28,7 @@ jobs:
       working-directory: applications/home
       run: |
         npm install
-        npm run build && npm run deploy
+        npm run build
       env:
         CI: true
 
@@ -36,7 +36,7 @@ jobs:
       working-directory: applications/search
       run: |
         npm install
-        npm run build && npm run deploy
+        npm run build
       env:
         CI: true
 
@@ -44,6 +44,6 @@ jobs:
       working-directory: applications/checkout
       run: |
         npm install
-        npm run build && npm run deploy
+        npm run build
       env:
         CI: true

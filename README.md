@@ -15,7 +15,7 @@
 - [Redux](https://redux.js.org/introduction/getting-started);
 - [Github Pages](https://docs.github.com/en/pages);
 - [Github Actions](https://docs.github.com/pt/actions);
-- [Netlify](https://docs.netlify.com/);
+- [Vercel](https://vercel.com/docs);
 
 ## Project Goal
 
