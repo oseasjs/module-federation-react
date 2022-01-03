@@ -26,8 +26,8 @@ _TODO_
 _TODO_
 
 * Running Locally: http://localhost:9020 | http://localhost:9021 | http://localhost:9022
-* On Github Pages: https://oseasjs.github.io/module-federation-react/home/
-* On Vercel: https://module-federation-react.vercel.app/
+* On Github Pages: https://oseasjs.github.io/module-federation-react/
+* On Vercel: https://module-federation-react-home.vercel.app/
 
 
 ## Inspiration
