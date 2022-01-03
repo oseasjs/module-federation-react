@@ -5,6 +5,8 @@ const deps = require("./package.json").dependencies;
 
 const getUrl = (_env, _module, _port) => {
 
+  console.log(`### getUrl`, {_env, _module, _port})
+
   if (_env.github) {
     return `https://oseasjs.github.io/module-federation-react/${_module}/`
   }
@@ -63,9 +65,9 @@ module.exports = (_, argv) => ({
       name: "search",
       filename: "remoteEntry.js",
       remotes: {
-        home: `home@${getUrl(argv.env, 'home', '9020')}/remoteEntry.js`,
-        checkout: `checkout@${getUrl(argv.env, 'checkout', '9021')}/remoteEntry.js`,
-        search: `search@${getUrl(argv.env, 'search', '9022')}/remoteEntry.js`,
+        home: `home@${getUrl(argv.env, 'home', '9020')}remoteEntry.js`,
+        checkout: `checkout@${getUrl(argv.env, 'checkout', '9021')}remoteEntry.js`,
+        search: `search@${getUrl(argv.env, 'search', '9022')}remoteEntry.js`,
       },
       exposes: {
         "./Search": "./src/SearchContent",
