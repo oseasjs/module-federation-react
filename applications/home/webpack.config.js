@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 
 const deps = require("./package.json").dependencies;
 
-const getUrl = (env, _module, port) => {
+const getUrl = (env, _module, _port) => {
 
   if (env.github) {
     return `https://oseasjs.github.io/module-federation-react/${_module}/`
@@ -12,7 +12,7 @@ const getUrl = (env, _module, port) => {
     return `https://module-federation-react-${module}.vercel.app/`
   }
   else {
-    return `http://localhost:${port}/`
+    return `http://localhost:${_port}/`
   }
   
 }
