@@ -29,20 +29,20 @@ const Frame = ({ items = [], page = "home" }) => (
     <Container>
       <Navbar bg="dark" expand="lg">
         <Navbar.Brand>
-          <Link to="/" style={{ color: "white" }}>
-            Pokeshop
+          <Link to="/" style={{ color: "gray", fontSize: "24px" }}>
+            Pokeshop Test
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link>
-              <Link to="/" style={{ color: "white" }}>
+              <Link to="/" style={{ color: "white", fontSize: "14px" }}>
                 Home
               </Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to="/search" style={{ color: "white" }}>
+              <Link to="/search" style={{ color: "white", fontSize: "14px" }}>
                 Search
               </Link>
             </Nav.Link>
@@ -56,7 +56,7 @@ const Frame = ({ items = [], page = "home" }) => (
           >
             <Cart color="white" size={30} />
             <span
-              style={{ color: "white", fontWeight: "bold", paddingLeft: 5 }}
+              style={{ color: "white", fontWeight: "bold", paddingLeft: 5, fontSize: "14px" }}
             >
               {items.reduce((a, { count }) => a + count, 0)}
             </span>
