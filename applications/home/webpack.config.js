@@ -19,7 +19,7 @@ const getUrl = (env, _module, port) => {
 
 module.exports = (_, argv) => ({
   output: {
-    publicPath: getUrl(argv.env, 'home'),
+    publicPath: getUrl(argv.env, 'home', '9020'),
   },
   resolve: {
     extensions: [".jsx", ".js", ".json"],

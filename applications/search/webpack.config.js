@@ -20,7 +20,7 @@ const getUrl = (_env, _module, _port) => {
 module.exports = (_, argv) => ({
 
   output: {
-    publicPath: getUrl(argv.env, 'search', 9022),
+    publicPath: getUrl(argv.env, 'search', '9022'),
   },
 
   resolve: {

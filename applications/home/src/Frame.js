@@ -15,14 +15,12 @@ const HomeRoute = () => (
 );
 const SearchRoute = () => (
   <React.Suspense fallback={<div />}>
-    <div>SEARCH</div>
-    {/* <Search /> */}
+    <Search />
   </React.Suspense>
 );
 const CheckoutRoute = () => (
   <React.Suspense fallback={<div />}>
-    <div>CHECKOUT</div>
-    {/* <Checkout /> */}
+    <Checkout />
   </React.Suspense>
 );
 
