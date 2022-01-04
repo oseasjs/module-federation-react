@@ -29,7 +29,7 @@ const Cart = ({ items }) => (
         </tr>
       ))}
       <tr>
-        <td colSpan="4">Grand Total 123</td>
+        <td colSpan="4">Grand Total</td>
         <td id="total">
           $
           {items.reduce(
