@@ -6,7 +6,7 @@
     "build:prod": "webpack --mode production --env vercel",
     "build": "webpack --mode development --env github",
     "start": "webpack-dev-server --mode development --env local",
-    "copy": "cp ./public/images/*.jpg ./dist",
+    "copy": "cp ./public/images/*.jpg ./dist && cp ./public/jsons/*.json ./dist",
     "predeploy": "npm run build && npm run copy",
     "deploy": "gh-pages -e home -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
+    "external-remotes-plugin": "^1.0.0",
     "react": "^17.0.2",
     "react-bootstrap": "^2.0.4",
     "react-bootstrap-icons": "^1.7.2",
