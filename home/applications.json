@@ -1,0 +1,26 @@
+{
+    "local": {
+        "homePublicPath": "http://localhost:9020/",
+        "searchPublicPath": "http://localhost:9021/",
+        "checkoutPublicPath": "http://localhost:9022/",
+        "homeModule": "home@http://localhost:9020/remoteEntry.js",
+        "searchModule": "search@http://localhost:9021/remoteEntry.js",
+        "checkoutModule": "checkout@http://localhost:9022/remoteEntry.js"
+    },
+    "github": {
+        "homePublicPath": "https://oseasjs.github.io/module-federation-react/home/",
+        "searchPublicPath": "https://oseasjs.github.io/module-federation-react/search/",
+        "checkoutPublicPath": "https://oseasjs.github.io/module-federation-react/checkout/",
+        "homeModule": "home@https://oseasjs.github.io/module-federation-react/home/remoteEntry.js",
+        "searchModule": "search@https://oseasjs.github.io/module-federation-react/search/remoteEntry.js",
+        "checkoutModule": "checkout@https://oseasjs.github.io/module-federation-react/checkout/remoteEntry.js"
+    },
+    "vercel": {
+        "homePublicPath": "https://module-federation-react-home.vercel.app/",
+        "searchPublicPath": "https://module-federation-react-search.vercel.app/",
+        "checkoutPublicPath": "https://module-federation-react-checkout.vercel.app/",
+        "homeModule": "home@https://module-federation-react-home.vercel.app/remoteEntry.js",
+        "searchModule": "search@https://module-federation-react-search.vercel.app/remoteEntry.js",
+        "checkoutModule": "checkout@https://module-federation-react-checkout.vercel.app/remoteEntry.js"
+    }
+}
