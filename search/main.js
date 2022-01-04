@@ -15,21 +15,21 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_bootstrap_dist_css_bootstrap_min_css\"), __webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"webpack_sharing_consume_default_react-dom_react-dom\"), __webpack_require__.e(\"src_SearchPage_js-data_image_svg_xml_3csvg_xmlns_27http_www_w3_org_2000_svg_27_viewBox_27-4_--0bf47b\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./SearchPage */ \"./src/SearchPage.js\"));\n\n//# sourceURL=webpack://search/./src/index.js?");
+eval("fetch('https://oseasjs.github.io/module-federation-react/home/applications.json').then(resp => resp.json()).then(data => {\n  window.homeUrlLocal = data.local.homeUrl;\n  window.checkoutUrlLocal = data.local.checkoutUrl;\n  window.searchUrlLocal = data.local.searchUrl;\n  window.homeUrlGithub = data.github.homeUrl;\n  window.checkoutUrlGithub = data.github.checkoutUrl;\n  window.searchUrlGithub = data.github.searchUrl;\n  window.homeUrlVercel = data.vercel.homeUrl;\n  window.checkoutUrlVercel = data.vercel.checkoutUrl;\n  window.searchUrlVercel = data.vercel.searchUrl;\n  Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_bootstrap_dist_css_bootstrap_min_css\"), __webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"webpack_sharing_consume_default_react-dom_react-dom\"), __webpack_require__.e(\"src_SearchPage_js-data_image_svg_xml_3csvg_xmlns_27http_www_w3_org_2000_svg_27_viewBox_27-4_--0bf47b\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./SearchPage */ \"./src/SearchPage.js\"));\n});\n\n//# sourceURL=webpack://search/./src/index.js?");
 
 /***/ }),
 
 /***/ "webpack/container/reference/checkout":
-/*!*****************************************************************************************************!*\
-  !*** external "checkout@https://oseasjs.github.io/module-federation-react/checkout/remoteEntry.js" ***!
-  \*****************************************************************************************************/
+/*!*************************************************************!*\
+  !*** external "checkout@[checkoutUrlGithub]remoteEntry.js" ***!
+  \*************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof checkout !== "undefined") return resolve();
-	__webpack_require__.l("https://oseasjs.github.io/module-federation-react/checkout/remoteEntry.js", (event) => {
+	__webpack_require__.l(checkoutUrlGithub + "remoteEntry.js", (event) => {
 		if(typeof checkout !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
@@ -44,16 +44,16 @@ module.exports = new Promise((resolve, reject) => {
 /***/ }),
 
 /***/ "webpack/container/reference/home":
-/*!*********************************************************************************************!*\
-  !*** external "home@https://oseasjs.github.io/module-federation-react/home/remoteEntry.js" ***!
-  \*********************************************************************************************/
+/*!*****************************************************!*\
+  !*** external "home@[homeUrlGithub]remoteEntry.js" ***!
+  \*****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof home !== "undefined") return resolve();
-	__webpack_require__.l("https://oseasjs.github.io/module-federation-react/home/remoteEntry.js", (event) => {
+	__webpack_require__.l(homeUrlGithub + "remoteEntry.js", (event) => {
 		if(typeof home !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
