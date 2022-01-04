@@ -15,21 +15,21 @@
   \**********************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_bootstrap_dist_css_bootstrap_min_css\"), __webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"webpack_sharing_consume_default_react-dom_react-dom\"), __webpack_require__.e(\"webpack_sharing_consume_default_react-bootstrap_react-bootstrap\"), __webpack_require__.e(\"webpack_sharing_consume_default_react-bootstrap-icons_react-bootstrap-icons-webpack_sharing_c-06beab\"), __webpack_require__.e(\"src_HomePage_js-data_image_svg_xml_3csvg_xmlns_27http_www_w3_org_2000_svg_27_viewBox_27-4_-4_-c9ed65\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./HomePage */ \"./src/HomePage.js\"));\n\n//# sourceURL=webpack://home/./src/index.js?");
+eval("fetch('https://oseasjs.github.io/module-federation-react/home/applications.json').then(resp => resp.json()).then(data => {\n  console.log(`INDEX`, data);\n  window.homeUrlLocal = data.local.homeUrl;\n  window.checkoutUrlLocal = data.local.checkoutUrl;\n  window.searchUrlLocal = data.local.searchUrl;\n  window.homeUrlGithub = data.github.homeUrl;\n  window.checkoutUrlGithub = data.github.checkoutUrl;\n  window.searchUrlGithub = data.github.searchUrl;\n  window.homeUrlVercel = data.vercel.homeUrl;\n  window.checkoutUrlVercel = data.vercel.checkoutUrl;\n  window.searchUrlVercel = data.vercel.searchUrl;\n  Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_bootstrap_dist_css_bootstrap_min_css\"), __webpack_require__.e(\"webpack_sharing_consume_default_react_react\"), __webpack_require__.e(\"webpack_sharing_consume_default_react-dom_react-dom\"), __webpack_require__.e(\"webpack_sharing_consume_default_react-bootstrap_react-bootstrap\"), __webpack_require__.e(\"webpack_sharing_consume_default_react-bootstrap-icons_react-bootstrap-icons-webpack_sharing_c-06beab\"), __webpack_require__.e(\"src_HomePage_js-data_image_svg_xml_3csvg_xmlns_27http_www_w3_org_2000_svg_27_viewBox_27-4_-4_-c9ed65\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./HomePage */ \"./src/HomePage.js\"));\n});\n\n//# sourceURL=webpack://home/./src/index.js?");
 
 /***/ }),
 
 /***/ "webpack/container/reference/checkout":
-/*!*****************************************************************************************************!*\
-  !*** external "checkout@https://oseasjs.github.io/module-federation-react/checkout/remoteEntry.js" ***!
-  \*****************************************************************************************************/
+/*!*************************************************************!*\
+  !*** external "checkout@[checkoutUrlGithub]remoteEntry.js" ***!
+  \*************************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof checkout !== "undefined") return resolve();
-	__webpack_require__.l("https://oseasjs.github.io/module-federation-react/checkout/remoteEntry.js", (event) => {
+	__webpack_require__.l(checkoutUrlGithub + "remoteEntry.js", (event) => {
 		if(typeof checkout !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
@@ -44,16 +44,16 @@ module.exports = new Promise((resolve, reject) => {
 /***/ }),
 
 /***/ "webpack/container/reference/home":
-/*!*********************************************************************************************!*\
-  !*** external "home@https://oseasjs.github.io/module-federation-react/home/remoteEntry.js" ***!
-  \*********************************************************************************************/
+/*!*****************************************************!*\
+  !*** external "home@[homeUrlGithub]remoteEntry.js" ***!
+  \*****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof home !== "undefined") return resolve();
-	__webpack_require__.l("https://oseasjs.github.io/module-federation-react/home/remoteEntry.js", (event) => {
+	__webpack_require__.l(homeUrlGithub + "remoteEntry.js", (event) => {
 		if(typeof home !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
@@ -68,16 +68,16 @@ module.exports = new Promise((resolve, reject) => {
 /***/ }),
 
 /***/ "webpack/container/reference/search":
-/*!*************************************************************************************************!*\
-  !*** external "search@https://oseasjs.github.io/module-federation-react/search/remoteEntry.js" ***!
-  \*************************************************************************************************/
+/*!*********************************************************!*\
+  !*** external "search@[searchUrlGithub]remoteEntry.js" ***!
+  \*********************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
 var __webpack_error__ = new Error();
 module.exports = new Promise((resolve, reject) => {
 	if(typeof search !== "undefined") return resolve();
-	__webpack_require__.l("https://oseasjs.github.io/module-federation-react/search/remoteEntry.js", (event) => {
+	__webpack_require__.l(searchUrlGithub + "remoteEntry.js", (event) => {
 		if(typeof search !== "undefined") return resolve();
 		var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 		var realSrc = event && event.target && event.target.src;
@@ -556,9 +556,9 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 			"webpack/sharing/consume/default/react/react": () => (loadSingletonVersionCheckFallback("default", "react", [1,17,0,2], () => (__webpack_require__.e("vendors-node_modules_react_index_js").then(() => (() => (__webpack_require__(/*! react */ "./node_modules/react/index.js"))))))),
 /******/ 			"webpack/sharing/consume/default/react-dom/react-dom": () => (loadSingletonVersionCheckFallback("default", "react-dom", [1,17,0,2], () => (__webpack_require__.e("vendors-node_modules_react-dom_index_js").then(() => (() => (__webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js"))))))),
 /******/ 			"webpack/sharing/consume/default/react-bootstrap/react-bootstrap": () => (loadStrictVersionCheckFallback("default", "react-bootstrap", [1,2,0,4], () => (Promise.all([__webpack_require__.e("vendors-node_modules_prop-types_index_js"), __webpack_require__.e("vendors-node_modules_react-bootstrap_esm_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react-dom_react-dom")]).then(() => (() => (__webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/index.js"))))))),
-/******/ 			"webpack/sharing/consume/default/react-bootstrap-icons/react-bootstrap-icons": () => (loadStrictVersionCheckFallback("default", "react-bootstrap-icons", [1,1,7,2], () => (Promise.all([__webpack_require__.e("vendors-node_modules_prop-types_index_js"), __webpack_require__.e("vendors-node_modules_react-bootstrap-icons_dist_index_js")]).then(() => (() => (__webpack_require__(/*! react-bootstrap-icons */ "./node_modules/react-bootstrap-icons/dist/index.js"))))))),
 /******/ 			"webpack/sharing/consume/default/react-redux/react-redux": () => (loadStrictVersionCheckFallback("default", "react-redux", [1,7,2,6], () => (Promise.all([__webpack_require__.e("vendors-node_modules_prop-types_index_js"), __webpack_require__.e("vendors-node_modules_react-redux_es_index_js"), __webpack_require__.e("webpack_sharing_consume_default_react-dom_react-dom")]).then(() => (() => (__webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js"))))))),
-/******/ 			"webpack/sharing/consume/default/react-router-dom/react-router-dom": () => (loadStrictVersionCheckFallback("default", "react-router-dom", [1,5,2,0], () => (Promise.all([__webpack_require__.e("vendors-node_modules_prop-types_index_js"), __webpack_require__.e("vendors-node_modules_react-router-dom_esm_react-router-dom_js")]).then(() => (() => (__webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js")))))))
+/******/ 			"webpack/sharing/consume/default/react-router-dom/react-router-dom": () => (loadStrictVersionCheckFallback("default", "react-router-dom", [1,5,2,0], () => (Promise.all([__webpack_require__.e("vendors-node_modules_prop-types_index_js"), __webpack_require__.e("vendors-node_modules_react-router-dom_esm_react-router-dom_js")]).then(() => (() => (__webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js"))))))),
+/******/ 			"webpack/sharing/consume/default/react-bootstrap-icons/react-bootstrap-icons": () => (loadStrictVersionCheckFallback("default", "react-bootstrap-icons", [1,1,7,2], () => (Promise.all([__webpack_require__.e("vendors-node_modules_prop-types_index_js"), __webpack_require__.e("vendors-node_modules_react-bootstrap-icons_dist_index_js")]).then(() => (() => (__webpack_require__(/*! react-bootstrap-icons */ "./node_modules/react-bootstrap-icons/dist/index.js")))))))
 /******/ 		};
 /******/ 		// no consumes in initial chunks
 /******/ 		var chunkMapping = {
@@ -572,9 +572,9 @@ module.exports = new Promise((resolve, reject) => {
 /******/ 				"webpack/sharing/consume/default/react-bootstrap/react-bootstrap"
 /******/ 			],
 /******/ 			"webpack_sharing_consume_default_react-bootstrap-icons_react-bootstrap-icons-webpack_sharing_c-06beab": [
-/******/ 				"webpack/sharing/consume/default/react-bootstrap-icons/react-bootstrap-icons",
 /******/ 				"webpack/sharing/consume/default/react-redux/react-redux",
-/******/ 				"webpack/sharing/consume/default/react-router-dom/react-router-dom"
+/******/ 				"webpack/sharing/consume/default/react-router-dom/react-router-dom",
+/******/ 				"webpack/sharing/consume/default/react-bootstrap-icons/react-bootstrap-icons"
 /******/ 			]
 /******/ 		};
 /******/ 		__webpack_require__.f.consumes = (chunkId, promises) => {
